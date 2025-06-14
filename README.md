@@ -42,21 +42,27 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 
 - **quantity:** Number of units per package (mixed with grams for loose produce)
 
+## 📜 License
+
+MIT — feel free to fork, star, and use in your portfolio.
+
 ## 👨‍💻 About the Author
 Hey, I’m Amlan Mohanty — a Data Analyst & Content Creator.
 I break down complex data topics into simple, practical content that actually helps you land a job.
 
-- 🎥 YouTube: Data Drool[https://www.youtube.com/@datadrool]
+ ### 🚀 Stay Connected & Join the Data Drool Community
+If you enjoyed this project and want to keep learning and growing as a data analyst, let’s stay in touch! I regularly share content around SQL, data analytics, portfolio projects, job tips, and more.
 
-- 💼 LinkedIn: Amlan Mohanty
+🎥 YouTube: [Data Drool](https://www.youtube.com/@datadrool)
+- Beginner-friendly tutorials, real-world projects, job and career advice
 
-- 🧠 Portfolio & Projects
+📺 Instagram: [data.drool](https://www.instagram.com/data.drool/)
+- Quick SQL tips, data memes, and behind-the-scenes content
 
-- 📩 Email Me
+💼 LinkedIn: [Amlan Mohanty](https://www.linkedin.com/in/amlanmohanty1/)
+- Let’s connect professionally and grow your data career
 
-💡 If you found this helpful, star the repo and drop a comment on the video. I'd love to hear your feedback!
 
-## 📜 License
-
-MIT — feel free to fork, star, and use in your portfolio.
+## 💡 Thanks for checking out the project! Your support means a lot — feel free to star ⭐ this repo or share it with someone learning SQL.
+I look forward to connecting with you 🚀
 
