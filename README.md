@@ -42,6 +42,46 @@ Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate p
 
 - **quantity:** Number of units per package (mixed with grams for loose produce)
 
+## 🔧 Project Workflow
+
+Here’s a step-by-step breakdown of what we do in this project:
+
+### 1. Database & Table Creation
+We start by creating a SQL table with appropriate data types:
+
+```
+CREATE TABLE zepto (
+  sku_id SERIAL PRIMARY KEY,
+  category VARCHAR(120),
+  name VARCHAR(150) NOT NULL,
+  mrp NUMERIC(8,2),
+  discountPercent NUMERIC(5,2),
+  availableQuantity INTEGER,
+  discountedSellingPrice NUMERIC(8,2),
+  weightInGms INTEGER,
+  outOfStock BOOLEAN,
+  quantity INTEGER
+);
+```
+
+### 2. Data Import
+- Loaded CSV using pgAdmin's import feature.
+
+ - If you're not able to use the import feature, write this code instead:
+```
+   \copy zepto(category,name,mrp,discountPercent,availableQuantity,
+            discountedSellingPrice,weightInGms,outOfStock,quantity)
+  FROM 'data/zepto_v2_utf8.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
+```
+- Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
+
+### 3. Data Exploration
+
+### 4. Data Cleaning
+
+### 5. Business Insights
+  
+
 ## 📜 License
 
 MIT — feel free to fork, star, and use in your portfolio.
@@ -63,6 +103,5 @@ If you enjoyed this project and want to keep learning and growing as a data anal
 - Let’s connect professionally and grow your data career
 
 
-## 💡 Thanks for checking out the project! Your support means a lot — feel free to star ⭐ this repo or share it with someone learning SQL.
-I look forward to connecting with you 🚀
+## 💡 Thanks for checking out the project! Your support means a lot — feel free to star ⭐ this repo or share it with someone learning SQL.🚀
 
