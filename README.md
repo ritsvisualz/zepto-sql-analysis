@@ -8,13 +8,15 @@ This project is perfect for:
 
 ## 📌 Project Overview
 
-The goal is to simulate how actual data analysts in the e-commerce or retail industries work behind the scenes to use SQL:
+The goal is to simulate how actual data analysts in the e-commerce or retail industries work behind the scenes to use SQL to:
 
-✅ Clean and prepare messy real-world inventory data  
-✅ Write business-driven SQL queries in PostgreSQL  
-✅ Understand product pricing, discounts, and stock strategy  
-✅ Identify high-value and out-of-stock products  
-✅ Derive insights around **pricing, inventory, stock availability, revenue** and more.
+✅ Set up a messy, real-world e-commerce inventory **database**
+
+✅ Perform **Exploratory Data Analysis (EDA)** to explore product categories, availability, and pricing inconsistencies
+
+✅ Implement **Data Cleaning** to handle null values, remove invalid entries, and convert pricing from paise to rupees
+
+✅ Write **business-driven SQL queries** to derive insights around **pricing, inventory, stock availability, revenue** and more
 
 ## 📁 Dataset Overview
 The dataset was sourced from [Kaggle](https://www.kaggle.com/datasets/palvinder2006/zepto-inventory-dataset/data?select=zepto_v2.csv) and was originally scraped from Zepto’s official product listings. It mimics what you’d typically encounter in a real-world e-commerce inventory system.
@@ -49,7 +51,7 @@ Here’s a step-by-step breakdown of what we do in this project:
 ### 1. Database & Table Creation
 We start by creating a SQL table with appropriate data types:
 
-```
+```sql
 CREATE TABLE zepto (
   sku_id SERIAL PRIMARY KEY,
   category VARCHAR(120),
@@ -68,10 +70,10 @@ CREATE TABLE zepto (
 - Loaded CSV using pgAdmin's import feature.
 
  - If you're not able to use the import feature, write this code instead:
-```
+```sql
    \copy zepto(category,name,mrp,discountPercent,availableQuantity,
             discountedSellingPrice,weightInGms,outOfStock,quantity)
-  FROM 'data/zepto_v2_utf8.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
+  FROM 'data/zepto_v2.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 ```
 - Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
 
@@ -111,8 +113,32 @@ CREATE TABLE zepto (
 - Measured total inventory weight per product category
 
 
-### 6. 👨‍💼 Follow along with the YouTube video for full walkthrough.
+## 🛠️ How to Use This Project
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/amlanmohanty/zepto-SQL-data-analysis-project.git
+   cd zepto-SQL-data-analysis-project
+   ```
+2. **Open zepto_SQL_data_analysis.sql**
+
+    This file contains:
+
+      - Table creation
+
+      - Data exploration
+
+      - Data cleaning
+
+      - SQL Business analysis
   
+3. **Load the dataset into pgAdmin or any other PostgreSQL client**
+
+      - Create a database and run the SQL file
+
+      - Import the dataset (convert to UTF-8 if necessary)
+
+4. **Follow along with the YouTube video for full walkthrough. 👨‍💼**
 
 ## 📜 License
 
