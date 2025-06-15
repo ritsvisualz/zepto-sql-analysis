@@ -17,7 +17,7 @@ The goal is to simulate how actual data analysts in the e-commerce or retail ind
 ✅ Derive insights around **pricing, inventory, stock availability, revenue** and more.
 
 ## 📁 Dataset Overview
-The dataset was sourced from Kaggle and was originally scraped from Zepto’s official product listings. It mimics what you’d typically encounter in a real-world e-commerce inventory system.
+The dataset was sourced from [Kaggle](https://www.kaggle.com/datasets/palvinder2006/zepto-inventory-dataset/data?select=zepto_v2.csv) and was originally scraped from Zepto’s official product listings. It mimics what you’d typically encounter in a real-world e-commerce inventory system.
 
 Each row represents a unique SKU (Stock Keeping Unit) for a product. Duplicate product names exist because the same product may appear multiple times in different package sizes, weights, discounts, or categories to improve visibility – exactly how real catalog data looks.
 
@@ -75,11 +75,43 @@ CREATE TABLE zepto (
 ```
 - Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
 
-### 3. Data Exploration
+### 3. 🔍 Data Exploration
+- Counted the total number of records in the dataset
 
-### 4. Data Cleaning
+- Viewed a sample of the dataset to understand structure and content
 
-### 5. Business Insights
+- Checked for null values across all columns
+
+- Identified distinct product categories available in the dataset
+
+- Compared in-stock vs out-of-stock product counts
+
+- Detected products present multiple times, representing different SKUs
+
+### 4. 🧹 Data Cleaning
+- Identified and removed rows where MRP or discounted selling price was zero
+
+- Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
+  
+### 5. 📊 Business Insights
+- Found top 10 best-value products based on discount percentage
+
+- Identified high-MRP products that are currently out of stock
+
+- Estimated potential revenue for each product category
+
+- Filtered expensive products (MRP > ₹500) with minimal discount
+
+- Ranked top 5 categories offering highest average discounts
+
+- Calculated price per gram to identify value-for-money products
+
+- Grouped products based on weight into Low, Medium, and Bulk categories
+
+- Measured total inventory weight per product category
+
+
+### 6. 👨‍💼 Follow along with the YouTube video for full walkthrough.
   
 
 ## 📜 License
